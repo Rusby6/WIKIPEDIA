@@ -1,0 +1,108 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #44354D;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+/* Contenedor principal de guardado */
+.saved-container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #44354D;
+}
+
+.user-icon {
+    font-size: 24px;
+    color: #44354D;
+}
+
+/* Mensaje de sitios guardados */
+.saved-count {
+    font-size: 16px;
+    color: #44354D;
+    margin-top: 10px;
+}
+
+.count {
+    color: #e74c3c; /* Rojo */
+    font-weight: bold;
+}
+
+/* Tarjeta de guardado */
+.saved-item {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background-color: #d3d3d3;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.saved-image {
+    font-size: 40px;
+    color: #7d7d7d;
+}
+
+.saved-heart-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: #e74c3c; /* Rojo */
+}
+
+/* Barra de navegación inferior */
+.bottom-nav {
+    background-color: #44354D;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.nav-item i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.nav-item p {
+    font-size: 14px;
+}
+
+.active {
+    color: #e74c3c; /* Color activo rojo */
+}
