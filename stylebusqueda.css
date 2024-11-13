@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* Estilos del cuerpo */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -70,7 +71,7 @@ h1 {
 .search-button a {
     color: #44354D;
     text-decoration: none;
-    font-size: 20px; /* Tamaño del icono */
+    font-size: 20px;
     display: flex;
     align-items: center;
 }
