@@ -112,6 +112,11 @@ header i {
     border-top-right-radius: 20px;
 }
 
+.bottom-nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .nav-item {
     display: flex;
     flex-direction: column;
