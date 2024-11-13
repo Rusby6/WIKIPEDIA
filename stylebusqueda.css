@@ -90,13 +90,16 @@
         border-top-right-radius: 20px;
     }
 
-    /* Elimina la subrayado de los enlaces en la barra de navegación inferior */
+    /* Enlaces de navegación y eliminación de subrayado */
     .bottom-nav a {
         text-decoration: none;
-        color: inherit; /* Asegura que los enlaces hereden el color deseado */
+        color: inherit; /* Para que hereden el color sin subrayado */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* Enlaces y elementos de navegación */
+    /* Elementos de navegación */
     .nav-item {
         display: flex;
         flex-direction: column;
@@ -114,6 +117,7 @@
 
     .nav-item p {
         font-size: 14px;
+        margin: 0; /* Elimina cualquier margen que pueda afectar la alineación */
     }
 
     /* Efecto de hover en los enlaces de navegación */
