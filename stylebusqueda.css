@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Estilos del cuerpo */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -99,13 +98,20 @@ h1 {
     border-top-right-radius: 20px;
 }
 
+/* Botones de navegación */
 .nav-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #fff;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
 }
 
+/* Icono y texto de los botones de navegación */
 .nav-item i {
     font-size: 24px;
     margin-bottom: 5px;
@@ -114,3 +120,9 @@ h1 {
 .nav-item p {
     font-size: 14px;
 }
+
+/* Efecto de hover en los botones de navegación */
+.nav-item:hover {
+    color: #ccc;
+}
+
