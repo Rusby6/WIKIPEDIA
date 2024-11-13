@@ -90,18 +90,17 @@ h1 {
     border-top-right-radius: 20px;
 }
 
-/* Enlaces de navegación como botones */
+/* Enlaces y elementos de navegación */
 .nav-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #fff;
-    text-decoration: none;
     font-size: 16px;
     cursor: pointer;
 }
 
-/* Icono y texto de los enlaces de navegación */
+/* Icono y texto de los elementos de navegación */
 .nav-item i {
     font-size: 24px;
     margin-bottom: 5px;
@@ -115,5 +114,3 @@ h1 {
 .nav-item:hover {
     color: #ccc;
 }
-
-
