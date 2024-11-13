@@ -73,9 +73,21 @@ header i {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo para que la imagen dentro del enlace ocupe todo el espacio de la tarjeta */
+.card a {
+    display: block; /* Hace que el enlace ocupe todo el espacio disponible */
+    width: 100%;
+}
+
 .card-img {
     width: 100%;
     height: auto;
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+/* Cambiar el estilo del enlace al pasar el mouse */
+.card a:hover .card-img {
+    opacity: 0.8; /* Efecto de opacidad al pasar el cursor */
 }
 
 .card-content {
@@ -125,4 +137,8 @@ header i {
 
 .nav-item p {
     font-size: 14px;
+}
+
+.nav-item:hover {
+    color: #ccc;
 }
