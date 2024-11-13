@@ -55,7 +55,7 @@ h1 {
     margin: 0 auto;
 }
 
-/* Botón de búsqueda */
+/* Botón de búsqueda transparente */
 .search-button {
     border: none;
     background: none;
@@ -66,15 +66,21 @@ h1 {
     cursor: pointer;
 }
 
+/* Enlace dentro del botón */
 .search-button a {
     color: #44354D;
     text-decoration: none;
+    font-size: 20px; /* Tamaño del icono */
+    display: flex;
+    align-items: center;
 }
 
+/* Cambiar color del ícono al pasar el ratón */
 .search-button a:hover {
     color: #777;
 }
 
+/* Campo de entrada de la barra de búsqueda */
 .search-box input {
     border: none;
     outline: none;
