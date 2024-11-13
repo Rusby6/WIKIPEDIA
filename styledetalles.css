@@ -1,4 +1,3 @@
-/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -12,13 +11,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 10px; /* Espaciado en los bordes de la pantalla */
 }
 
 /* Contenedor principal de detalle */
 .detail-container {
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 600px; /* Máximo ancho de 600px para pantallas grandes */
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -101,3 +101,77 @@ header h1 {
     font-size: 14px;
     color: #555;
 }
+
+/* Media Query para dispositivos pequeños (teléfonos móviles) */
+@media (max-width: 600px) {
+    /* Contenedor debe ser 100% del ancho disponible */
+    .detail-container {
+        width: 100%;
+        padding: 10px; /* Añadimos padding para no pegar el contenido a los bordes */
+    }
+
+    /* Ajustamos el tamaño de las fuentes */
+    header h1 {
+        font-size: 18px; /* Reducir el tamaño de la fuente */
+    }
+
+    .close-icon {
+        font-size: 18px; /* Reducir el tamaño del ícono */
+    }
+
+    .reviews h2 {
+        font-size: 16px; /* Reducir el tamaño del título de las reseñas */
+    }
+
+    /* Las reseñas deben ocupar más espacio */
+    .review i {
+        font-size: 18px;
+    }
+
+    .review-text {
+        font-size: 12px; /* Reducir el tamaño del texto de la reseña */
+    }
+
+    /* La imagen debe ocupar el 100% del contenedor */
+    .main-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Media Query para pantallas grandes (por encima de 600px) */
+@media (min-width: 601px) {
+    /* El contenedor puede ocupar hasta el 80% del ancho */
+    .detail-container {
+        width: 80%;
+        padding: 20px;
+    }
+
+    /* Títulos y textos más grandes */
+    header h1 {
+        font-size: 24px;
+    }
+
+    .close-icon {
+        font-size: 24px;
+    }
+
+    .reviews h2 {
+        font-size: 18px;
+    }
+
+    .review i {
+        font-size: 24px;
+    }
+
+    .review-text {
+        font-size: 16px;
+    }
+
+    /* Las imágenes en pantallas grandes pueden tener un aspecto más grande */
+    .main-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
