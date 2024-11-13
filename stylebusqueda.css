@@ -59,16 +59,24 @@ h1 {
 .search-button {
     border: none;
     background: none;
-    color: #44354D;
-    font-size: 20px;
-    cursor: pointer;
-    margin-right: 10px;
+    padding: 0;
+    margin: 0;
     display: flex;
     align-items: center;
-    text-decoration: none;
+    cursor: pointer;
 }
 
-.search-button:hover {
+/* Enlace dentro del botón */
+.search-button a {
+    color: #44354D;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Cambiar color del ícono al pasar el ratón */
+.search-button a:hover {
     color: #777;
 }
 
@@ -90,26 +98,20 @@ h1 {
     border-top-right-radius: 20px;
 }
 
-/* Enlaces de navegación y eliminación de subrayado */
-.bottom-nav a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Elementos de navegación */
+/* Botones de navegación */
 .nav-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #fff;
-    font-size: 16px;
+    border: none;
+    background: none;
     cursor: pointer;
+    font-size: 16px;
+    outline: none;
 }
 
-/* Icono y texto de los elementos de navegación */
+/* Icono y texto de los botones de navegación */
 .nav-item i {
     font-size: 24px;
     margin-bottom: 5px;
@@ -117,10 +119,9 @@ h1 {
 
 .nav-item p {
     font-size: 14px;
-    margin: 0; /* Elimina cualquier margen que pueda afectar la alineación */
 }
 
-/* Efecto de hover en los enlaces de navegación */
+/* Efecto de hover en los botones de navegación */
 .nav-item:hover {
     color: #ccc;
 }
