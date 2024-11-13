@@ -9,14 +9,20 @@ body {
     background-color: #f0f0f0;
     color: #44354D;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
+    padding: 10px; /* Añadido padding para evitar que los contenidos toquen los bordes */
 }
 
-/* Contenedor principal */
-.container {
-    padding: 20px;
+/* Contenedor principal de detalle */
+.detail-container {
+    width: 100%;
+    max-width: 600px; /* Aumentado para pantallas grandes */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 /* Encabezado */
@@ -24,121 +30,145 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    font-size: 24px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
 }
 
-header i {
+header h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #44354D;
+}
+
+.close-icon {
+    font-size: 20px;
     color: #44354D;
     cursor: pointer;
 }
 
-/* Barra de búsqueda */
-.search-box {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    max-width: 400px;
-    margin: 20px auto;
+/* Imagen principal */
+.image-container {
+    width: 100%;
 }
 
-.search-box i {
+.main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Sección de reseñas */
+.reviews {
+    padding: 15px;
+    text-align: left;
+}
+
+.reviews h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #44354D;
+    border-bottom: 1px solid #44354D;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Cada reseña */
+.review {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.review i {
     font-size: 20px;
     color: #44354D;
     margin-right: 10px;
 }
 
-.search-box input {
-    border: none;
-    outline: none;
-    width: 100%;
-    font-size: 16px;
-}
-
-/* Resultados de búsqueda */
-.results {
+.review-content {
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
-.card {
-    position: relative;
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo para que la imagen dentro del enlace ocupe todo el espacio de la tarjeta */
-.card a {
-    display: block; /* Hace que el enlace ocupe todo el espacio disponible */
-    width: 100%;
-}
-
-.card-img {
-    width: 100%;
-    height: auto;
-    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
-}
-
-/* Cambiar el estilo del enlace al pasar el mouse */
-.card a:hover .card-img {
-    opacity: 0.8; /* Efecto de opacidad al pasar el cursor */
-}
-
-.card-content {
-    padding: 10px;
-}
-
-.location {
+.reviewer-name {
     font-weight: bold;
-    color: #c90000;
+    color: #44354D;
     margin-bottom: 5px;
 }
 
-.description {
+.review-text {
+    font-size: 14px;
     color: #555;
 }
 
-.favorite {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    color: #ff5c5c;
-    cursor: pointer;
+/* Media Query para dispositivos pequeños (teléfonos móviles) */
+@media (max-width: 600px) {
+    /* El contenedor debe ocupar el 100% del ancho disponible */
+    .detail-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* El título del header debe ajustarse */
+    header h1 {
+        font-size: 18px; /* Reducir el tamaño de la fuente */
+    }
+
+    /* Las reseñas deben tener un padding más pequeño */
+    .reviews {
+        padding: 10px;
+    }
+
+    /* Los iconos de reseña deben ser un poco más pequeños */
+    .review i {
+        font-size: 18px;
+    }
+
+    /* Reducir el tamaño del texto de la reseña */
+    .review-text {
+        font-size: 12px;
+    }
+
+    /* La imagen debe ocupar todo el ancho disponible */
+    .main-image {
+        width: 100%;
+        height: auto;
+    }
 }
 
-/* Barra de navegación inferior */
-.bottom-nav {
-    background-color: #44354D;
-    display: flex;
-    justify-content: space-around;
-    padding: 15px 0;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+/* Media Query para pantallas grandes (por ejemplo, tabletas y escritorios) */
+@media (min-width: 601px) {
+    /* El contenedor puede tener un máximo de 600px de ancho */
+    .detail-container {
+        width: 80%; /* 80% del ancho de la pantalla */
+        max-width: 600px;
+    }
+
+    /* En pantallas grandes, el título puede ser más grande */
+    header h1 {
+        font-size: 24px; /* Aumentamos el tamaño para pantallas grandes */
+    }
+
+    /* Las reseñas deben tener más espacio */
+    .reviews {
+        padding: 20px;
+    }
+
+    /* Los iconos de reseña deben ser más grandes */
+    .review i {
+        font-size: 24px;
+    }
+
+    /* El texto de la reseña se puede mostrar más grande */
+    .review-text {
+        font-size: 16px;
+    }
+
+    /* En pantallas grandes, la imagen debe estar centrada y más grande si es necesario */
+    .main-image {
+        width: 100%;
+        height: auto;
+    }
 }
 
-.nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-}
-
-.nav-item i {
-    font-size: 24px;
-    margin-bottom: 5px;
-}
-
-.nav-item p {
-    font-size: 14px;
-}
-
-.nav-item:hover {
-    color: #ccc;
-}
