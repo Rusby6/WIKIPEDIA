@@ -1,127 +1,126 @@
 * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        color: #44354D;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100vh;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #44354D;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
 
-    /* Contenedor principal */
-    .container {
-        padding: 20px;
-        text-align: center;
-    }
+/* Contenedor principal */
+.container {
+    padding: 20px;
+    text-align: center;
+}
 
-    /* Encabezado */
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        font-size: 24px;
-    }
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 24px;
+}
 
-    header i {
-        color: #44354D;
-        cursor: pointer;
-    }
+header i {
+    color: #44354D;
+    cursor: pointer;
+}
 
-    /* Título principal */
-    h1 {
-        font-size: 32px;
-        font-weight: bold;
-        color: #44354D;
-        margin: 40px 0;
-    }
+/* Título principal */
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #44354D;
+    margin: 40px 0;
+}
 
-    /* Barra de búsqueda */
-    .search-box {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
-        max-width: 400px;
-        margin: 0 auto;
-    }
+/* Barra de búsqueda */
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
 
-    /* Botón de búsqueda transparente */
-    .search-button {
-        border: none;
-        background: none;
-        color: #44354D;
-        font-size: 20px;
-        cursor: pointer;
-        margin-right: 10px;
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-    }
+/* Botón de búsqueda transparente */
+.search-button {
+    border: none;
+    background: none;
+    color: #44354D;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
 
-    .search-button:hover {
-        color: #777;
-    }
+.search-button:hover {
+    color: #777;
+}
 
-    /* Campo de entrada de la barra de búsqueda */
-    .search-box input {
-        border: none;
-        outline: none;
-        width: 100%;
-        font-size: 16px;
-    }
+/* Campo de entrada de la barra de búsqueda */
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+}
 
-    /* Barra de navegación inferior */
-    .bottom-nav {
-        background-color: #44354D;
-        display: flex;
-        justify-content: space-around;
-        padding: 15px 0;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
+/* Barra de navegación inferior */
+.bottom-nav {
+    background-color: #44354D;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
 
-    /* Enlaces de navegación y eliminación de subrayado */
-    .bottom-nav a {
-        text-decoration: none;
-        color: inherit; /* Para que hereden el color sin subrayado */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+/* Enlaces de navegación y eliminación de subrayado */
+.bottom-nav a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    /* Elementos de navegación */
-    .nav-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: #fff;
-        font-size: 16px;
-        cursor: pointer;
-    }
+/* Elementos de navegación */
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
 
-    /* Icono y texto de los elementos de navegación */
-    .nav-item i {
-        font-size: 24px;
-        margin-bottom: 5px;
-    }
+/* Icono y texto de los elementos de navegación */
+.nav-item i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
 
-    .nav-item p {
-        font-size: 14px;
-        margin: 0; /* Elimina cualquier margen que pueda afectar la alineación */
-    }
+.nav-item p {
+    font-size: 14px;
+    margin: 0; /* Elimina cualquier margen que pueda afectar la alineación */
+}
 
-    /* Efecto de hover en los enlaces de navegación */
-    .nav-item:hover {
-        color: #ccc;
-    }
-</style>
+/* Efecto de hover en los enlaces de navegación */
+.nav-item:hover {
+    color: #ccc;
+}
