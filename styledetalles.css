@@ -41,10 +41,16 @@ header h1 {
     color: #44354D;
 }
 
+/* Estilo para el botón de cierre */
+.close-button {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #44354D; /* Mantiene el color del ícono */
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .close-icon {
     font-size: 20px;
-    color: #44354D;
-    cursor: pointer;
 }
 
 /* Imagen principal */
@@ -104,35 +110,31 @@ header h1 {
 
 /* Media Query para dispositivos pequeños (teléfonos móviles) */
 @media (max-width: 600px) {
-    /* Contenedor debe ser 100% del ancho disponible */
     .detail-container {
         width: 100%;
-        padding: 10px; /* Añadimos padding para no pegar el contenido a los bordes */
+        padding: 10px;
     }
 
-    /* Ajustamos el tamaño de las fuentes */
     header h1 {
-        font-size: 18px; /* Reducir el tamaño de la fuente */
+        font-size: 18px;
     }
 
-    .close-icon {
-        font-size: 18px; /* Reducir el tamaño del ícono */
+    .close-button, .close-icon {
+        font-size: 18px;
     }
 
     .reviews h2 {
-        font-size: 16px; /* Reducir el tamaño del título de las reseñas */
+        font-size: 16px;
     }
 
-    /* Las reseñas deben ocupar más espacio */
     .review i {
         font-size: 18px;
     }
 
     .review-text {
-        font-size: 12px; /* Reducir el tamaño del texto de la reseña */
+        font-size: 12px;
     }
 
-    /* La imagen debe ocupar el 100% del contenedor */
     .main-image {
         width: 100%;
         height: auto;
@@ -141,18 +143,16 @@ header h1 {
 
 /* Media Query para pantallas grandes (por encima de 600px) */
 @media (min-width: 601px) {
-    /* El contenedor puede ocupar hasta el 80% del ancho */
     .detail-container {
         width: 80%;
         padding: 20px;
     }
 
-    /* Títulos y textos más grandes */
     header h1 {
         font-size: 24px;
     }
 
-    .close-icon {
+    .close-button, .close-icon {
         font-size: 24px;
     }
 
@@ -168,7 +168,6 @@ header h1 {
         font-size: 16px;
     }
 
-    /* Las imágenes en pantallas grandes pueden tener un aspecto más grande */
     .main-image {
         width: 100%;
         height: auto;
