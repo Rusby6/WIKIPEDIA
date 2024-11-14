@@ -5,38 +5,34 @@
     box-sizing: border-box;
 }
 
-html, body {
+body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     color: #44354D;
-    height: 100%;
-    width: 100%;
-    overflow: hidden; /* Elimina el desplazamiento si es necesario */
-}
-
-body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    overflow-x: hidden; /* Evita desbordamiento horizontal en móviles */
+    margin: 0;
 }
 
 /* Contenedor principal de perfil */
 .profile-container {
-    width: 100vw; /* Ocupa el 100% del ancho de la ventana */
-    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    width: 100%;
+    max-width: 400px; /* Limita el ancho máximo */
     background-color: #f9f9f9;
-    border-radius: 0; /* Elimina los bordes redondeados para ocupar toda la pantalla */
-    box-shadow: none; /* Elimina la sombra */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px; /* Ajuste de padding para evitar desbordamiento en móviles */
 }
 
 /* Encabezado */
 header {
     display: flex;
     justify-content: flex-end;
-    padding: 15px;
+    padding: 10px;
 }
 
 .close-icon {
@@ -80,7 +76,7 @@ header {
 /* Opciones de perfil */
 .profile-options {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
 }
 
 .option {
@@ -98,3 +94,17 @@ header {
     color: #44354D;
     margin-right: 10px;
 }
+
+/* Media query para ajustar en pantallas pequeñas */
+@media (max-width: 600px) {
+    .profile-container {
+        padding: 10px; /* Reduce el padding en móviles */
+    }
+    .profile-header {
+        padding: 15px;
+    }
+    .option {
+        padding: 8px 0;
+    }
+}
+
