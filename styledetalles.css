@@ -1,3 +1,4 @@
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -11,18 +12,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 10px; /* Espaciado en los bordes de la pantalla */
+    height: 100vh; /* Altura completa del viewport */
+    overflow: hidden; /* Evita scroll innecesario */
+    margin: 0;
 }
 
 /* Contenedor principal de detalle */
 .detail-container {
     width: 100%;
-    max-width: 600px; /* Máximo ancho de 600px para pantallas grandes */
+    height: 100%; /* Ocupa toda la pantalla */
     background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye elementos */
 }
 
 /* Encabezado */
@@ -30,48 +32,54 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     background-color: #f9f9f9;
     border-bottom: 1px solid #ddd;
 }
 
 header h1 {
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #44354D;
+    margin: 0;
 }
 
 /* Estilo para el botón de cierre */
 .close-button {
     text-decoration: none; /* Elimina el subrayado */
     color: #44354D; /* Mantiene el color del ícono */
-    font-size: 20px;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
 .close-icon {
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
 /* Imagen principal */
 .image-container {
     width: 100%;
+    flex-grow: 1; /* Ocupa el espacio disponible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-image {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
 }
 
 /* Sección de reseñas */
 .reviews {
-    padding: 15px;
+    padding: 20px;
     text-align: left;
+    flex-shrink: 0; /* Impide que esta sección crezca o se reduzca */
 }
 
 .reviews h2 {
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #44354D;
     border-bottom: 1px solid #44354D;
@@ -87,7 +95,7 @@ header h1 {
 }
 
 .review i {
-    font-size: 20px;
+    font-size: 1.5rem;
     color: #44354D;
     margin-right: 10px;
 }
@@ -104,73 +112,56 @@ header h1 {
 }
 
 .review-text {
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #555;
 }
 
-/* Media Query para dispositivos pequeños (teléfonos móviles) */
+/* Media Queries para responsividad */
+
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 600px) {
-    .detail-container {
-        width: 100%;
-        padding: 10px;
-    }
-
     header h1 {
-        font-size: 18px;
+        font-size: 1.2rem;
     }
 
     .close-button, .close-icon {
-        font-size: 18px;
+        font-size: 1.2rem;
     }
 
     .reviews h2 {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .review i {
-        font-size: 18px;
+        font-size: 1.2rem;
     }
 
     .review-text {
-        font-size: 12px;
-    }
-
-    .main-image {
-        width: 100%;
-        height: auto;
+        font-size: 0.8rem;
     }
 }
 
-/* Media Query para pantallas grandes (por encima de 600px) */
+/* Ajustes para pantallas grandes */
 @media (min-width: 601px) {
-    .detail-container {
-        width: 80%;
-        padding: 20px;
-    }
-
     header h1 {
-        font-size: 24px;
+        font-size: 1.8rem;
     }
 
     .close-button, .close-icon {
-        font-size: 24px;
+        font-size: 1.8rem;
     }
 
     .reviews h2 {
-        font-size: 18px;
+        font-size: 1.4rem;
     }
 
     .review i {
-        font-size: 24px;
+        font-size: 1.8rem;
     }
 
     .review-text {
-        font-size: 16px;
-    }
-
-    .main-image {
-        width: 100%;
-        height: auto;
+        font-size: 1rem;
     }
 }
+
 
