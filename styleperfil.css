@@ -12,19 +12,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Altura completa del viewport */
-    overflow: hidden; /* Evita scroll innecesario */
+    min-height: 100vh; /* Asegura que cubra toda la pantalla */
+    overflow-y: auto; /* Permite desplazamiento vertical */
     margin: 0;
 }
 
 /* Contenedor principal de perfil */
 .profile-container {
     width: 100%;
-    height: 100%; /* Ocupa toda la pantalla */
+    min-height: 100vh; /* Ocupa toda la altura del viewport */
     background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribuye contenido */
     padding: 20px; /* Espaciado interno */
 }
 
