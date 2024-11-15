@@ -33,6 +33,23 @@ header i {
     cursor: pointer;
 }
 
+/* Estilos para el botón de usuario */
+.user-icon-button {
+    background: none; /* Sin fondo */
+    border: none; /* Sin bordes */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    padding: 0; /* Elimina padding extra */
+}
+
+.user-icon-button i {
+    font-size: 24px; /* Tamaño del ícono */
+    color: #44354D; /* Color del ícono */
+}
+
+.user-icon-button:hover i {
+    color: #c90000; /* Cambia el color al pasar el mouse */
+}
+
 /* Barra de búsqueda */
 .search-box {
     display: flex;
