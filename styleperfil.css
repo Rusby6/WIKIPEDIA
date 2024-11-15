@@ -12,31 +12,30 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow-x: hidden; /* Evita desbordamiento horizontal en móviles */
-    margin: 0;
+    min-height: 100vh; /* Ocupa toda la altura de la ventana */
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    padding: 10px; /* Espaciado para móviles */
 }
 
 /* Contenedor principal de perfil */
 .profile-container {
-    width: 100%;
-    max-width: 400px; /* Limita el ancho máximo */
+    width: 90%; /* Usa un porcentaje dinámico para ajustarse a móviles */
+    max-width: 500px; /* Ancho máximo para pantallas grandes */
     background-color: #f9f9f9;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    padding: 15px; /* Ajuste de padding para evitar desbordamiento en móviles */
+    padding: 20px;
 }
 
 /* Encabezado */
 header {
     display: flex;
     justify-content: flex-end;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .close-icon {
-    font-size: 20px;
+    font-size: 1.5rem; /* Usa unidades relativas */
     color: #44354D;
     cursor: pointer;
 }
@@ -46,24 +45,25 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    text-align: center;
+    padding: 20px 10px;
 }
 
 .profile-icon {
-    font-size: 60px;
+    font-size: 4rem;
     color: #44354D;
     margin-bottom: 10px;
 }
 
 .profile-header h1 {
-    font-size: 22px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #44354D;
     margin-bottom: 5px;
 }
 
 .profile-header p {
-    font-size: 14px;
+    font-size: 1rem;
     color: #44354D;
     display: flex;
     align-items: center;
@@ -76,34 +76,68 @@ header {
 /* Opciones de perfil */
 .profile-options {
     width: 100%;
-    padding: 10px;
+    margin-top: 20px;
 }
 
 .option {
     display: flex;
     align-items: center;
-    padding: 10px 0;
-    font-size: 16px;
+    padding: 15px 0;
+    font-size: 1rem;
     color: #44354D;
-    border-top: 1px solid #44354D;
+    border-top: 1px solid #ccc;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option:hover {
+    background-color: #eaeaea;
 }
 
 .option i {
-    font-size: 20px;
+    font-size: 1.5rem;
     color: #44354D;
     margin-right: 10px;
 }
 
-/* Media query para ajustar en pantallas pequeñas */
+/* Media queries para responsividad */
+
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 600px) {
     .profile-container {
-        padding: 10px; /* Reduce el padding en móviles */
-    }
-    .profile-header {
         padding: 15px;
     }
+    .profile-header {
+        padding: 15px 5px;
+    }
     .option {
-        padding: 8px 0;
+        padding: 10px 0;
+        font-size: 0.9rem;
+    }
+    .close-icon, .option i {
+        font-size: 1.2rem;
     }
 }
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 768px) {
+    body {
+        justify-content: center;
+        padding: 20px; /* Mayor separación en escritorios */
+    }
+    .profile-container {
+        padding: 30px;
+        border-radius: 20px;
+    }
+    .profile-header h1 {
+        font-size: 2rem;
+    }
+    .option {
+        font-size: 1.2rem;
+        padding: 20px 0;
+    }
+    .close-icon, .option i {
+        font-size: 1.8rem;
+    }
+}
+
