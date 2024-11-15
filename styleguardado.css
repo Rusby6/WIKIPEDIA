@@ -34,6 +34,16 @@ header h1 {
     color: #44354D;
 }
 
+/* Estilo del enlace del ícono de usuario */
+.user-icon-link {
+    text-decoration: none; /* Elimina subrayado */
+    color: inherit; /* Usa el color del ícono */
+}
+
+.user-icon-link:hover {
+    color: #e74c3c; /* Cambia el color al pasar el ratón */
+}
+
 .user-icon {
     font-size: 24px;
     color: #44354D;
